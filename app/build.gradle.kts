@@ -8,14 +8,14 @@ android {
     namespace = "com.example.vinonovi"
     compileSdk = 34
 
-    val key: String = com.android.build.gradle.internal.cxx.configure.gradleLocalProperties(rootDir)
-        .getProperty("SUPABASE_ANON_KEY")
-    val url: String = com.android.build.gradle.internal.cxx.configure.gradleLocalProperties(rootDir)
-        .getProperty("SUPABASE_URL")
-
-    buildFeatures {
-        buildConfig = true // 이 부분을 추가하여 사용자 지정 BuildConfig 필드를 활성화합니다.
-    }
+//    val key: String = com.android.build.gradle.internal.cxx.configure.gradleLocalProperties(rootDir)
+//        .getProperty("SUPABASE_ANON_KEY")
+//    val url: String = com.android.build.gradle.internal.cxx.configure.gradleLocalProperties(rootDir)
+//        .getProperty("SUPABASE_URL")
+//
+//    buildFeatures {
+//        buildConfig = true // 이 부분을 추가하여 사용자 지정 BuildConfig 필드를 활성화합니다.
+//    }
 
     defaultConfig {
         applicationId = "com.example.vinonovi"
@@ -28,10 +28,10 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
-        // set value part
-        buildConfigField("String", "SUPABASE_ANON_KEY", "\"$key\"")
-//        buildConfigField("String", "SECRET", "\"${properties.getProperty("SECRET")}\"")
-        buildConfigField("String", "SUPABASE_URL", "\"$url\"")
+//        // set value part
+//        buildConfigField("String", "SUPABASE_ANON_KEY", "\"$key\"")
+////        buildConfigField("String", "SECRET", "\"${properties.getProperty("SECRET")}\"")
+//        buildConfigField("String", "SUPABASE_URL", "\"$url\"")
     }
 
     buildTypes {

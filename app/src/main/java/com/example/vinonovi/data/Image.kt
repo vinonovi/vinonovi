@@ -12,3 +12,10 @@ data class Image(
     val idolGroup: String,
     val idolName: String
 )
+
+@Entity(tableName = "gallery_photos")
+data class GalleryPhoto(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
+    val uri: String // 사진의 Uri를 저장할 필드
+)
